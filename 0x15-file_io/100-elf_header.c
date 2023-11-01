@@ -47,7 +47,7 @@ void check_elf(unsigned char *e_ident)
 void print_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
-	
+
 	switch (e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
@@ -70,9 +70,9 @@ void print_class(unsigned char *e_ident)
  */
 void print_data(unsigned char *e_ident)
 {
-	printf ("  Data:                             ");
+	printf("  Data:                             ");
 
-	switch (e_ident [EI_DATA])
+	switch (e_ident[EI_DATA])
 	{
 		case ELFDATANONE:
 			printf("none\n");
@@ -178,3 +178,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	}
 }
 
+/**
+ * print_entry - To print the entry point of an ELF header.
+ * @e_entry: The address of the ELF entry point.
+ */
